@@ -1,0 +1,154 @@
+/* Full Screen Background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2f2f3f;
+}
+
+/* Main Box */
+.login-box {
+  width: 750px;
+  height: 420px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE (Gradient Panel) */
+.login-left {
+  flex: 1;
+  background: linear-gradient(135deg, #b24592, #f15f79);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-left h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.login-left p {
+  font-size: 14px;
+}
+
+/* Register/Login Switch Button */
+.register-btn {
+  margin-top: 15px;
+  padding: 8px 25px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: white;
+  color: #b24592;
+}
+
+/* RIGHT SIDE (Form) */
+.login-right {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+}
+
+.login-right h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Fields */
+.login-right input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Login/Register Button */
+.login-btn {
+  width: 200px;
+  padding: 12px;
+  background: #b24592;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #9c3d7f;
+}
+
+/* Forgot Password */
+.forgot {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* OR Text */
+.or {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Social Icons */
+.social-login {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.social-login i{
+    margin-left: 20px;
+}
+
+.social-login span {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.social-login span:hover {
+  background: #b24592;
+  color: white;
+  border-color: #b24592;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left {
+    border-radius: 0;
+    padding: 30px;
+  }
+}
