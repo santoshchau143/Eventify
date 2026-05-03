@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -8,6 +9,8 @@ const Register = () => {
   const [form, setForm] = useState({
     username: "",
     email: "",
+    phone: "",
+    DOB: "",
     password: "",
   });
 
@@ -15,41 +18,47 @@ const Register = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = () => {
-    const { username, email, password } = form;
+  const handleRegister = async () => {
+    const { username, email, phone, DOB, password } = form;
 
-    // ✅ Required
-    if (!username || !email || !password) {
+    // ✅ Improved validation
+    if (!username || !email || !phone || !DOB || !password) {
       alert("All fields are required ❗");
       return;
     }
-
-    // ✅ Unique check
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const exists = users.find(
-      (u) => u.email === email || u.username === username
-    );
-
-    if (exists) {
-      alert("User already exists ❌");
+    if (phone.length !== 10) {
+      alert("Enter valid 10-digit phone number");
       return;
+    }  
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        form
+      );
+
+      alert(res.data.msg || "Registered Successfully ✅");
+
+      // ✅ clear form
+      setForm({
+        username: "",
+        email: "",
+        phone: "",
+        DOB: "",
+        password: "",
+      });
+
+      navigate("/login");
+    } catch (err) {
+      console.log(err); // 🔥 debug
+      alert(err.response?.data?.msg || "Something went wrong ❌");
     }
-
-    // ✅ Save
-    users.push(form);
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Registered Successfully ✅");
-
-    navigate("/"); // go home
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
 
-        {/* LEFT FORM (same design) */}
         <div className="login-right">
           <h2>Register</h2>
 
@@ -66,6 +75,22 @@ const Register = () => {
             placeholder="Email"
             name="email"
             value={form.email}
+            onChange={handleChange}
+          />
+
+          {/* ✅ FIXED */}
+          <input
+            type="tel"
+            placeholder="Mobile Number"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+          />
+
+          <input
+            type="date"
+            name="DOB"
+            value={form.DOB}
             onChange={handleChange}
           />
 
@@ -91,7 +116,6 @@ const Register = () => {
           </div>
         </div>
 
-        {/* RIGHT PANEL (UNCHANGED) */}
         <div className="login-left">
           <h1>Welcome, Back!</h1>
           <p>Already have an account?</p>

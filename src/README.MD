@@ -1,125 +1,43 @@
-# 🎉 Eventify - Event & Movie Booking App
+# 🎟️ Eventify - Event Management & Ticket Booking System
 
-Eventify is a modern **React-based web application** that allows users to explore events, book tickets, and check movie listings (PVR & INOX).
+A full-stack MERN (MongoDB, Express, React, Node.js) web application that allows users to browse events, select seats, book tickets, and make payments online.
 
 ---
 
 ## 🚀 Features
 
-* 🏠 Home page with event introduction
-* 🎟️ Events listing (Concerts, Tech Meetups, etc.)
-* 🎬 Movie tickets (PVR & INOX integration UI)
-* 📄 Pages:
+### 👤 User Features
+- 🔐 User Registration & Login (Email / Phone)
+- 🎫 Browse Events
+- 🪑 Seat Selection System
+- 🛒 Add to Cart
+- 💳 Online Payment (Razorpay Integration)
+- 📦 Booking History
+- 👤 User Profile Management
 
-  * Home
-  * Events
-  * About
-  * Contact
-* 📬 Contact form UI
-* 🧭 Navigation with React Router
-* 🎨 Clean UI with separate CSS files
-
----
-
-## 🛠️ Tech Stack
-
-* ⚛️ React JS (Create React App)
-* 🔀 React Router DOM
-* 🎨 CSS (Modular styling)
+### 🛠️ Admin Features
+- 📊 Admin Dashboard
+- 📩 View Contact Messages
+- 🎯 Manage Events (Add / View)
 
 ---
 
-## 📁 Folder Structure
+## 🧑‍💻 Tech Stack
 
-```bash
-src/
- ├── components/
- │    ├── Navbar.jsx
- │    ├── Navbar.css
- │    ├── Footer.jsx
- │    ├── Footer.css
- │
- ├── pages/
- │    ├── Home.jsx
- │    ├── Home.css
- │    ├── Events.jsx
- │    ├── Events.css
- │    ├── About.jsx
- │    ├── About.css
- │    ├── Contact.jsx
- │    ├── Contact.css
- │
- ├── App.js
- ├── index.js
-```
+### Frontend
+- React.js
+- React Router
+- Axios
+- CSS (Custom UI)
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+
+### Payment Gateway
+- Razorpay
 
 ---
 
-## ⚙️ Installation & Setup
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/eventify.git
-```
-
-2. Go to project folder
-
-```bash
-cd eventify
-```
-
-3. Install dependencies
-
-```bash
-npm install
-```
-
-4. Run the app
-
-```bash
-npm start
-```
-
-👉 Open in browser:
-http://localhost:3000
-
----
-
-## 📸 Project Highlights
-
-* Event cards with booking button
-* Movie listings (PVR / INOX)
-* Navigation between pages
-* Clean and structured UI
-
----
-
-## 🌟 Future Improvements
-
-* 🔐 User authentication system
-* 🎟️ Real ticket booking system
-* 🛒 Cart & payment integration
-* 📊 Admin dashboard
-* 🔍 Search & filter functionality
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork this repo and improve it.
-
----
-
-## 📧 Contact
-
-📩 Email: [support@eventify.com](mailto:support@eventify.com)
-📍 Location: India
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
-
----
+## 📁 Project Structure

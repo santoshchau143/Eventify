@@ -1,22 +1,28 @@
-.contact-container {
-  padding: 30px;
+.contact-page {
+  padding: 40px;
+  background: #f5f7fa;
+  min-height: 100vh;
   text-align: center;
 }
 
-.contact-subtitle {
+.contact-page h1 {
+  margin-bottom: 10px;
+}
+
+.contact-page p {
   color: #555;
-  margin-bottom: 30px;
 }
 
 /* Layout */
-.contact-content {
+.contact-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
-/* Info section */
+/* LEFT SIDE */
 .contact-info {
   text-align: left;
   max-width: 300px;
@@ -26,40 +32,46 @@
   margin-top: 15px;
 }
 
-/* Form */
+/* FORM */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   width: 300px;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
-  border-radius: 8px;
   border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4a47d5;
+}
+
+/* BUTTON */
 .contact-form button {
   padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: #4f46e5;
+  background: linear-gradient(45deg, #4a47d5, #6a5acd);
   color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .contact-form button:hover {
-  background: #3730a3;
+  opacity: 0.9;
 }
 
 /* Footer */
 .contact-footer {
-  margin-top: 30px;
-  background: #111;
+  margin-top: 40px;
+  background: black;
   color: white;
-  padding: 15px;
+  padding: 12px;
   border-radius: 8px;
 }

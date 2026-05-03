@@ -18,7 +18,7 @@ const Home = () => {
         <div className="hero-right">
           <img
             src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
-            alt="event"
+            alt="event" style={{ width: 300, height: '300px' }} 
           />
         </div>
       </div>

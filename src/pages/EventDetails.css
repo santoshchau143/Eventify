@@ -1,0 +1,75 @@
+.details-container {
+  padding: 30px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Card */
+.details-card {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.details-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Title */
+.details-card h2 {
+  margin-bottom: 10px;
+}
+
+/* Info */
+.details-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Seats section */
+.seats {
+  margin-top: 20px;
+}
+
+/* Seat buttons */
+.seat {
+  padding: 10px 15px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  background: lightgray;
+  transition: 0.2s;
+}
+
+.seat:hover {
+  background: #ccc;
+}
+
+/* Selected seat */
+.seat.selected {
+  background: green;
+  color: white;
+  border: none;
+}
+
+/* Add to cart button */
+.add-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #333;
+}
